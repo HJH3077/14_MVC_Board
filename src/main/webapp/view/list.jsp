@@ -80,7 +80,8 @@ table{width: 800px; margin:10px auto;}
 								<c:when test="${k==pvo.nowPage}">
 									<span style="background-color: tomato; padding: 5px;">${k}</span></c:when>
 								<c:otherwise>
-									<span style="color: tomato; padding: 5px;"><a>${k}</</a>
+									<span style="color: tomato; padding: 5px;">
+									<a href="${pageContext.request.contextPath}/MyController?cmd=list&cPage=${k}">${k}</a>
 								</c:otherwise>
 							</c:choose>
 				   </c:forEach>

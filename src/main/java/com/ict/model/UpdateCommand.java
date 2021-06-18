@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 public class UpdateCommand implements Command{
 @Override
 public String exec(HttpServletRequest request, HttpServletResponse response) {
-	return null;
-}
+	request.setAttribute("cPage", request.getParameter("cPage"));
+	return "view/update.jsp";
+	}
 }
